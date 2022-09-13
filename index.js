@@ -8,12 +8,6 @@ const bot = new Discord.Client({
     partials: ['MESSAGE', 'CHANNEL', 'GUILD_MEMBER', 'REACTION']
 });
 
-const activities_list = [
-    "Coded By IccY#2265", 
-    "Ticket Bot",
-    "Use ?help",
-    ]; 
-
 bot.on('ready', () => {
     console.log(`Bot Amade Shod!`);
     setInterval(() => {
@@ -35,4 +29,4 @@ const load = async () => {
 }
 
 load();
-bot.login(config.token);
+bot.login(process.env.token);
